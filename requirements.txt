@@ -20,6 +20,7 @@ dash-table==5.0.0
 Flask==2.2.5
 fonttools==4.41.1
 frozenlist==1.4.0
+gunicorn==21.2.0
 h11==0.14.0
 holoviews==1.16.2
 httpcore==0.17.3
