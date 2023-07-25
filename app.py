@@ -1,5 +1,6 @@
 import pandas as pd
 import itertools
+import os
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -169,5 +170,8 @@ app = Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
 
 app.layout = serve_layout()
 
+server = app.server
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8050))
+    app.run_server(host='0.0.0.0', port=port)
